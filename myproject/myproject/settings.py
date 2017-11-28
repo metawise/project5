@@ -25,7 +25,7 @@ SECRET_KEY = 'ozpegs@ceoj85aj7nlx@-x-!s)^&7n(yj=owfv$)s7dqm^%c3$'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', '172.24.0.32', 'localhost']
 
 
 # Application definition
@@ -132,3 +132,8 @@ STATICFILES_DIRS = [
 ]
 
 LOGOUT_REDIRECT_URL = 'home'
+LOGIN_REDIRECT_URL = 'home'
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+LOGIN_URL = 'login'
